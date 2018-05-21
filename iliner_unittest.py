@@ -1,4 +1,4 @@
-B#!/bin/usr/python
+#!/bin/usr/python
 
 import numpy as np
 import sys
