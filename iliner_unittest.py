@@ -13,10 +13,10 @@ class TestFileParser(unittest.TestCase):
     def setUp(self):
         """Make instances with dummy good files and dummy bad files
         """
-        good_sample = LoadFiles.load_sample("good_chr22_50p.sample")
-        good_haps = LoadFiles.load_haps("good_chr22_50p.haps")
-        bad_sample = LoadFiles.load_sample("bad_chr22_50p.sample")
-        bad_haps = LoadFiles.load_haps("bad_chr22_50p.haps")
+        good_sample = LoadFiles.load_sample("test_data/good_chr22_50p.sample")
+        good_haps = LoadFiles.load_haps("test_data/good_chr22_50p.haps")
+        bad_sample = LoadFiles.load_sample("test_data/bad_chr22_50p.sample")
+        bad_haps = LoadFiles.load_haps("test_data/bad_chr22_50p.haps")
 
         self.good_set = LoadFiles(good_sample, good_haps)
         self.bad_set = LoadFiles(bad_sample, bad_haps)
@@ -99,7 +99,7 @@ class TestFileParser(unittest.TestCase):
         self.assertEqual(didraiseerror, True)
         didraiseerrors = False
         try:
-            FileParser.validate_nucleotides(bad_alts, 'Alt, All')
+            FileParser.validate_nucleotides(bad_alts, 'Alt All')
         except ValueError:
             didraiseerrors = True
         self.assertEqual(didraiseerrors, True)
@@ -125,10 +125,10 @@ class TestFileMaker(unittest.TestCase):
     def setUp(self):
         """Again make instances with dummy good files and dummy bad files
         """
-        good_sample = LoadFiles.load_sample("good_chr22_50p.sample")
-        good_haps = LoadFiles.load_haps("good_chr22_50p.haps")
-        bad_sample = LoadFiles.load_sample("bad_chr22_50p.sample")
-        bad_haps = LoadFiles.load_haps("bad_chr22_50p.haps")
+        good_sample = LoadFiles.load_sample("test_data/good_chr22_50p.sample")
+        good_haps = LoadFiles.load_haps("test_data/good_chr22_50p.haps")
+        bad_sample = LoadFiles.load_sample("test_data/bad_chr22_50p.sample")
+        bad_haps = LoadFiles.load_haps("test_data/bad_chr22_50p.haps")
 
         self.good_set = LoadFiles(good_sample, good_haps)
         self.bad_set = LoadFiles(bad_sample, bad_haps)
@@ -159,8 +159,8 @@ class TestVCFCodes(unittest.TestCase):
     
     def setUp(self):
         
-        good_vcf, good_comments = VcfReader.read_vcf("25p_chr22.phased.vcf")
-        bad_vcf, bad_comments = VcfReader.read_vcf("bad_25p_chr22.phased.vcf")
+        good_vcf, good_comments = VcfReader.read_vcf("test_data/25p_chr22.phased.vcf")
+        bad_vcf, bad_comments = VcfReader.read_vcf("test_data/bad_25p_chr22.phased.vcf")
 
         self.good_vcf = VcfReader(good_vcf, good_comments)
         self.bad_vcf = VcfReader(bad_vcf, bad_comments)
@@ -168,7 +168,7 @@ class TestVCFCodes(unittest.TestCase):
     def test_no_comments(self):
         didraiseerror = False
         try:
-            VcfReader.read_vcf("no_comments_25p_chr22.phased.vcf")
+            VcfReader.read_vcf("test_data/no_comments_25p_chr22.phased.vcf")
         except ValueError:
             didraiseerror = True
         self.assertEqual(didraiseerror, True)
