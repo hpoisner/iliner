@@ -65,8 +65,15 @@ class FileConvert(LoadFiles):
 
 
     def make_gpos_mapfile(self, hapmap, outfile):
-        """Produces a map file with genetic position. It does so by interpolating genetic position. Citation: Joe Pickrell interpolate_maps.py
-        
+        """Produces a map file with genetic position. It does so by interpolating genetic position. 
+           Code is a modified version of the cited code below
+           Citation: 
+           Author: Joe Pickrell 
+           Date: 5/29/2018
+           Source Code: interpolate_maps.py
+           Code Version: Version Commited Jun 19, 2014
+           Availability: https://github.com/joepickrell/1000-genomes-genetic-maps/blob/master/scripts/interpolate_maps.py
+
         Args:
             haps_file(:obj:`numpy array`): validated haplotype file
             hapmap(:obj:`file`): file used to compute genetic position

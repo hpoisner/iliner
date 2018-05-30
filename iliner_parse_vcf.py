@@ -273,11 +273,22 @@ class VcfMakeFiles(VcfReader):
         return final_list
 
     def make_gpos_mapfile(self, hapmap, outfile):
-        """
+        """Produces a map file with genetic position. It does so my interpolating genetic position.
+           Code is a modified version of the cited code below
+           Citation:
+           Author: Joe Pickrell
+           Date: 5/29/2018
+           Source Code: interpolate_maps.py
+           Code Version: Version Commited Jun 19, 2014
+           Availability: https://github.com/joepickrell/1000-genomes-genetic-map/blob/master/scripts/interpolate_maps.py
+
         Args:
             self
             hapmap:file pathway to genetic map file
             outfile: pathway to output file
+
+        Returns:
+             Mapfile with genetic position
 
         """
         mappos = list()
