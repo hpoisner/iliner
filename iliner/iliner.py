@@ -4,19 +4,20 @@ import argparse
 import logging
 import numpy as np
 import sys
-from iliner_load_parse import LoadFiles, FileParser
-from iliner_make_files import FileConvert
-from iliner_launch_ilash import RunIlash
-from iliner_ibd_depth import IBDDepth
-from iliner_stats import IBDStats
-from iliner_parse_vcf import VcfReader, VcfParser, VcfMakeFiles
+from .iliner_load_parse import LoadFiles, FileParser
+from .iliner_make_files import FileConvert
+from .iliner_launch_ilash import RunIlash
+from .iliner_ibd_depth import IBDDepth
+from .iliner_stats import IBDStats
+from .iliner_parse_vcf import VcfReader, VcfParser, VcfMakeFiles
+
 
 class LogFilter(logging.Filter):
     """Code from https://stackoverflow.com/questions/1383254/logging-streamhandler-and-standard-streams
     """
     def __init__(self, level):
         self.level = level
-    
+
     def filter(self, record):
         return record.levelno < self.level
 
@@ -38,7 +39,7 @@ class Logger(object):
         stdout_handler.setLevel(logging.DEBUG)
         self.logger.addHandler(stdout_handler)
 
-        
+
 
 
 def main():
@@ -58,7 +59,7 @@ def main():
     parser.add_argument('--population_file', '-pf', type=str, required=False, help='File with individual ids and population [ID]tab[Population]')
     parser.add_argument('--vcf', '-v', type=str, required=False, help='Phased VCF with file path')
     parser.add_argument('--no_indel', '-ni', action='store_true', required=False, help='Pass if you would like to remove indels from your vcf or haplotype file')
-    
+
     args = parser.parse_args()
     log = Logger()
     if args.module == 'ilash':
@@ -145,7 +146,7 @@ def main():
             pedfile.close()
             log.logger.info('Your pedigree file has been made')
             log.logger.info('Launching iLASH')
-            RunIlash.make_param_file(mapfile_str, pedfile_str, args.ilash)                
+            RunIlash.make_param_file(mapfile_str, pedfile_str, args.ilash)
     elif args.module == 'ibd_depth':
         log.logger.info('You have selected ibd_depth')
         mapfile = IBDDepth.load_files(args.mapfile)
@@ -187,7 +188,7 @@ def main():
         fig.set_size_inches(13.0, 13.0)
         fig.savefig(args.outfile_prefix + '_heatmap.png')
         log.logger.info('Your heatmap has been made')
-        
+
 
 if __name__ == '__main__':
     main()
