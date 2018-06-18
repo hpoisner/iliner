@@ -29,11 +29,11 @@ setup(name='iliner',
     author_email='hannah.poisner@icahn.mssm.edu',
     install_requires=[
     'pandas', 'numpy',
-    'maatplotlib', 'seaborn'
+    'matplotlib', 'seaborn'
     ],
     python_requires='>=3',
     package_dir={'iliner': 'iliner'},
-    keywords=['iLASh', 'ibd', 'identityt-by-descent', 'genotype'],
+    keywords=['iLASH', 'IBD', 'identity-by-descent', 'genotype'],
     classifiers=[
     ## Classifiers defined in http://pypi.python.org/pypi?%3Aaction=list_classifiers
     # 'Development Status :: 1 - Planning',
