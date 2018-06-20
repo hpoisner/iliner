@@ -41,10 +41,10 @@ VCF Method Sample Code
   iliner ilash --vcf /path/to/sample/file --genetic_map /path/to/genetic/map/file \
   --ilash /path/to/ilash --outfile_prefix /output/path/with/prefix
 
-Required Flags:
+Required Arguments:
   -ilash   This determines the module.
-  -s, --sample,    Location of the Sample File. This should be in PLINK format.
-  -hp, --haps Location of the Haplotype File. This should be in PLINK format and should be phase.
+  --sample SAMPLE, -s SAMPLE    Location of the Sample File. This should be in PLINK format.
+  --haps HAPLOTYPE, -hp HAPLOTYPE   Location of the Haplotype File. This should be in PLINK format and should be phase.
   or
   --VCF, -v Location of the VCF. This should phased and in standard genotype format.
   --genetic_map, -gm  Location of the genetic map. This should be for the same build as the genotype files.
