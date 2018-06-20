@@ -45,12 +45,12 @@ Required Arguments:
   -ilash  This determines the module.
   --sample SAMPLE, -s SAMPLE  Location of the Sample File. This should be in PLINK format.
 
-  --haps HAPLOTYPE, -hp HAPLOTYPE
+--haps HAPLOTYPE, -hp HAPLOTYPE
             Location of the Haplotype File. This should be in PLINK format and should be phase.
 
   --VCF VCF, -v VCF  Location of the VCF. This should phased and in standard genotype format.
 
-  --genetic_map GENTICMAP, -gm GENETICMAP
+--genetic_map GENTICMAP, -gm GENETICMAP
             Location of the genetic map. This should be for the same build as the genotype files.
 
   --ilash ILASH, -i ILASH  Location of the ilash executable.
