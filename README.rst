@@ -42,21 +42,17 @@ VCF Method Sample Code
   --ilash /path/to/ilash --outfile_prefix /output/path/with/prefix
 
 Required Arguments:
-  -ilash      This determines the module.
-  --sample SAMPLE, -s SAMPLE    Location of the Sample File. This should be in PLINK format.
-  --haps HAPLOTYPE, -hp HAPLOTYPE
-          Location of the Haplotype File. This should be in PLINK format and should be phase.
+  -ilash  This determines the module.
+  --sample SAMPLE, -s SAMPLE  Location of the Sample File. This should be in PLINK format.
+  --haps HAPLOTYPE, -hp HAPLOTYPE  Location of the Haplotype File. This should be in PLINK format and should be phase.
 
-  --VCF VCF, -v VCF    Location of the VCF. This should phased and in standard genotype format.
-  --genetic_map GENTICMAP, -gm GENETICMAP
-            Location of the genetic map. This should be for the same build as the genotype files.
-  --ilash ILASH, -i ILASH
-            Location of the ilash executable.
-  --outfile_prefix Prefix, -op PREFIX
-          Pathway for the output file with prefix.
+  --VCF VCF, -v VCF  Location of the VCF. This should phased and in standard genotype format.
+  --genetic_map GENTICMAP, -gm GENETICMAP  Location of the genetic map. This should be for the same build as the genotype files.
+  --ilash ILASH, -i ILASH  Location of the ilash executable.
+  --outfile_prefix Prefix, -op PREFIX  Pathway for the output file with prefix.
 
 Optional Argument:
-  --no_indel, -ni    This will remove indels.
+  --no_indel, -ni  This will remove indels.
 
 The IBD depth module should use a file that contains iLASH results for all of the chromosomes of interest.
 
