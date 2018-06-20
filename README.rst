@@ -42,17 +42,17 @@ VCF Method Sample Code
   --ilash /path/to/ilash --outfile_prefix /output/path/with/prefix
 
 Required Arguments:
-  -ilash   This determines the module.
+  -ilash      This determines the module.
   --sample SAMPLE, -s SAMPLE    Location of the Sample File. This should be in PLINK format.
-  --haps HAPLOTYPE, -hp HAPLOTYPE   Location of the Haplotype File. This should be in PLINK format and should be phase.
+  -hp HAPLOTYPE, --haps HAPLOTYPE   Location of the Haplotype File. This should be in PLINK format and should be phase.
 
   or
 
 
   -v VCF, --VCF VCF   Location of the VCF. This should phased and in standard genotype format.
-  -gm GENETICMAP, --genetic_map GENTICMAP   Location of the genetic map. This should be for the same build as the genotype files.
-  -i ILASH, --ilash ILASH   Location of the ilash executable.
-  -op PREFIX, --outfile_prefix Prefix   Pathway for the output file with prefix.
+  -gm GENETICMAP, --genetic_map GENTICMAP     Location of the genetic map. This should be for the same build as the genotype files.
+  -i ILASH, --ilash ILASH       Location of the ilash executable.
+  -op PREFIX, --outfile_prefix Prefix   P   athway for the output file with prefix.
 
 Optional Argument:
   -ni, --no_indel   This will remove indels.
