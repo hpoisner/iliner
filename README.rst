@@ -36,14 +36,14 @@ Haplotype and Sample Method Sample Code
 
 VCF Method Sample Code
 
-.. code-block:: 
+.. code-block::
 
   iliner ilash --vcf /path/to/sample/file --genetic_map /path/to/genetic/map/file \
   --ilash /path/to/ilash --outfile_prefix /output/path/with/prefix
 
 Required Arguments:
   ilash This determines the module.
-  --sample, -s  Location of the Sample File. This should be in PLINK format.
+  --sample, -s    Location of the Sample File. This should be in PLINK format.
   --haps, -hp Location of the Haplotype File. This should be in PLINK format and should be phase.
   or
   --VCF, -v Location of the VCF. This should phased and in standard genotype format.
