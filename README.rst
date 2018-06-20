@@ -45,14 +45,17 @@ Required Arguments:
   -ilash   This determines the module.
   --sample SAMPLE, -s SAMPLE    Location of the Sample File. This should be in PLINK format.
   --haps HAPLOTYPE, -hp HAPLOTYPE   Location of the Haplotype File. This should be in PLINK format and should be phase.
-  or
-  --VCF, -v Location of the VCF. This should phased and in standard genotype format.
-  --genetic_map, -gm  Location of the genetic map. This should be for the same build as the genotype files.
-  --ilash, -i Location of the ilash executable.
-  --outfile_prefix, -op Pathway for the output file with prefix.
 
-Optional Flag:
-  --no_indel, -ni This will remove indels.
+  or
+
+
+  -v VCF, --VCF VCF   Location of the VCF. This should phased and in standard genotype format.
+  -gm GENETICMAP, --genetic_map GENTICMAP   Location of the genetic map. This should be for the same build as the genotype files.
+  -i ILASH, --ilash ILASH   Location of the ilash executable.
+  -op PREFIX, --outfile_prefix Prefix   Pathway for the output file with prefix.
+
+Optional Argument:
+  -ni, --no_indel   This will remove indels.
 
 The IBD depth module should use a file that contains iLASH results for all of the chromosomes of interest.
 
